@@ -5,7 +5,7 @@ task: Install DEMO version of Terraform Enterprise (ex PTFE) v4 with Self Signed
 note: The following instructions are true for v202007-2 of Terraform Enterprise. Adapt as needed for other versions.
 
 Info: In order to have a valid SSL certificate, you would need a domain name.
-In this case, I am gonna use duckdns.org for a free subdomain and Letsencrypt for a free SSL certificate.
+As an example, I am going to use duckdns.org for a free subdomain and Letsencrypt for a free SSL certificate.
 
 ## Obtain a free subdomain from duckdns.org
 
@@ -26,7 +26,9 @@ In this case, I am gonna use duckdns.org for a free subdomain and Letsencrypt fo
 
 ```
 $ vagrant plugin install vagrant-disksize
-$ DOMAIN_NAME vagrant up
+$ TFE_FQDN=(your_own_domain_name_here) vagrant up
+(for example: $ tfe-2020-08-04.duckdns.org vagrant up)
+
 (check the address and bail if not 127.0.0.1)
 * Open a web browser to http://localhost:8800/
 
