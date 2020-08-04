@@ -11,16 +11,10 @@ In this case, I am gonna use duckdns.org for a free subdomain and Letsencrypt fo
 
 1. Point your web browser to: https://www.duckdns.org/
 2. Sign-in with any of the supported methods (GitHub, Twitter, Reddit, Google, etc.)
-3. Create a new unique sub-domain (for example, tfe-<current-date>)
-(screenshot)
-![alt text](https://github.com/qwerty1979bg/vagrant-tfeV4-demo-with-valid-certificate/blob/[branch]/duckdns-screenshot-1.jpg?raw=true)
-https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true
-
-![alt text](duckdns-screenshot-1.jpg)
-
-(tfe-2020-08-04)
+3. Create a new unique sub-domain (for example, tfe-2020-08-04)
+![screenshot showing where to click to create a sub-domain](duckdns-screenshot-1.jpg)
 4. Set the current IP to 127.0.0.1
-(screenshot)
+![screenshot showing how to set the IP of the sub-domain](duckdns-screenshot-2.jpg)
 
 ## Usage
 
