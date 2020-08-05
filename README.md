@@ -11,9 +11,10 @@ As an example, I am going to use duckdns.org for a free subdomain and Letsencryp
 
 1. Point your web browser to: https://www.duckdns.org/
 2. Sign-in with any of the supported methods (GitHub, Twitter, Reddit, Google, etc.)
-3. Create a new unique sub-domain (for example, tfe-2020-08-04)
+3. Make note of the token. You will need it later.
+4. Create a new unique sub-domain (for example, tfe-2020-08-04)
 ![screenshot showing where to click to create a sub-domain](duckdns-screenshot-1.jpg)
-4. Set the current IP to 127.0.0.1
+5. Set the current IP to 127.0.0.1
 ![screenshot showing how to set the IP of the sub-domain](duckdns-screenshot-2.jpg)
 
 ## Usage
@@ -26,16 +27,19 @@ As an example, I am going to use duckdns.org for a free subdomain and Letsencryp
 
 ```
 $ vagrant plugin install vagrant-disksize
-$ TFE_FQDN=(your_own_domain_name_here) vagrant up
-(for example: $ tfe-2020-08-04.duckdns.org vagrant up)
+$ TFE_FQDN=(your_own_domain_name_here) DUCKDNS_TOKEN=(your_token) vagrant up
+(for example: $ TFE_FQDN=tfe-2020-08-04.duckdns.org DUCKDNS_TOKEN=123123 vagrant up)
 
-(check the address and bail if not 127.0.0.1)
 * Open a web browser to http://localhost:8800/
 
 * Continue the manual set-up according to the guide:
- - Hostname: localhost
- - Click on "Use Self-Signed Cert"
- - Select a license file
+ - Hostname: Your FQDN (for example: tfe-2020-08-04.duckdns.org)
+ - Click on "If your private key and cert are already on this server, click here."
+ - Private Key Path = /cert/tfe.key
+ - Certificate Path = /cert/tfe.cer
+ - Click "Save & Continue"
+
+*** - Select a license file
  - Choose an "Online" installation type and click "Continue"
  - Choose a password for the Admin Console and click "Continue"
  - Make sure all the pre-flight checks are green and click "Continue"
