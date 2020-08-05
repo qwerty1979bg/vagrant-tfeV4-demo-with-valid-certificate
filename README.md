@@ -1,4 +1,4 @@
-# vagrant-tfeV4-demo-self-signed
+# vagrant-tfeV4-demo-with-valid-certificate
 
 task: Install DEMO version of Terraform Enterprise (ex PTFE) v4 with Self Signed Certificate - Vagrant
 
